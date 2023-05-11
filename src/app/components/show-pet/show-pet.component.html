@@ -1,0 +1,24 @@
+
+<div class="title">
+  <h1>Pet</h1>
+</div>
+
+<app-spinner *ngIf="loading"></app-spinner>
+<div *ngIf="pet != null" class="container card-container">
+  <mat-card class="card">
+    <mat-card-title class="card-title">
+      {{pet.name}}
+    </mat-card-title>
+    <mat-card-subtitle class="card-info">
+      {{pet.breet}}
+    </mat-card-subtitle>
+    <mat-card-content>
+      <p class="card-info"><strong>Color:</strong> {{pet.color}}</p>
+      <p class="card-info"><strong>Weight:</strong> {{pet.weight}}</p>
+      <p class="card-info"><strong>Age:</strong> {{pet.age}}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button routerLink="/petList" mat-raised-button>Back</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
